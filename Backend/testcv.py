@@ -19,7 +19,7 @@ def detect(gray, frame):
 
 
 
-video_capture = cv2.VideoCapture(0) 
+video_capture = cv2.VideoCapture(0)
 while video_capture.isOpened(): 
    # Captures video_capture frame by frame 
     _, frame = video_capture.read()  
