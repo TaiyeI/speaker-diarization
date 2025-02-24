@@ -50,6 +50,7 @@ const VideoPlayer = ({}) => {
     // Create offer
     const offer = await peerConnection.createOffer();
     await peerConnection.setLocalDescription(offer);
+    console.log(offer);
 
     // Here we would normally send the offer to the remote peer through a signaling server
     // Simulating signaling server part: receive the offer and create an answer
@@ -110,10 +111,10 @@ const VideoPlayer = ({}) => {
     setIsCallStarted(false);
   };
 
-  useEffect(() => {
-    // Automatically get user media on load
-    getLocalMedia();
-  }, []);
+  // useEffect(() => {
+  //   // Automatically get user media on load
+  //   getLocalMedia();
+  // }, []);
 
   return (
     <div className="flex flex-col items-center p-4 space-y-4">

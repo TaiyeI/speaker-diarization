@@ -1,7 +1,13 @@
 function Navbar() {
   return (
-    <div className="w-screen bg-purple-800 sticky h-1/6 text-center p-3">
-      <p className="text-center p-3">Visual Audio Transcription Service</p>
+    <div
+      className="w-screen font-mono sticky h-1/6 text-center p-3 flex flex-row items-end justify-evenly
+    "
+    >
+      <p className="text-black">DIARIZE</p>
+      <p>Live Trancription</p>
+      <p>Video Call</p>
+      <p>Video Upload</p>
     </div>
   );
 }

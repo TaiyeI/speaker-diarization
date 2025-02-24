@@ -1,4 +1,3 @@
-import React from "react";
 import { useDropzone } from "react-dropzone";
 
 type FileUploadProps = {
@@ -7,6 +6,8 @@ type FileUploadProps = {
 
 function FileUpload(props: FileUploadProps) {
   const { onFileUpload } = props;
+  const uploadMessage =
+    "Drag and drop MP3 or MP4 files here, or click to select files";
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -27,16 +28,14 @@ function FileUpload(props: FileUploadProps) {
         className="border-dashed border-2 border-gray-400 p-6 text-center rounded-md hover:bg-gray-100 transition cursor-pointer"
       >
         <input {...getInputProps()} className="hidden" />
-        <p className="text-gray-600">
-          Drag and drop MP3 or MP4 files here, or click to select files
-        </p>
+        <p className="text-gray-600">{uploadMessage}</p>
       </div>
 
       <input
         type="file"
-        accept=".mp3, .mp4"
+        accept=".mp3, .mp4, .mpg"
         onChange={handleFileChange}
-        className="mt-4 w-full text-sm text-gray-600 file:border file:rounded file:px-3 file:py-2 file:mr-4 file:cursor-pointer file:bg-gray-100 file:text-gray-700"
+        className="mt-4 w-full text-sm text-transparent file:border file:rounded file:px-3 file:py-2 file:mr-4 file:cursor-pointer file:bg-gray-100 file:text-gray-700"
       />
     </div>
   );
