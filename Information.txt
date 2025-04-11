@@ -1,0 +1,3 @@
+Conda environment = baseenv
+conda activate baseenv
+conda deactivate

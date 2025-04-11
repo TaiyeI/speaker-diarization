@@ -53,17 +53,10 @@ def FindMouth(img, output):
 
 def CalculateDistances(dict):
     newdict = {}
-    # for item, value in dict.items():
-    #     newdict[item] = []
-    #     for jtem, jvalue in dict.items():
-    #         if jtem != item:
-    #             newdict[item].append(math.dist(value, jvalue)) 
     zero_array = []
     for item, value in dict.items():
             zero_array.append(math.dist(value, dict[0]))
     return zero_array            
-
-    #print(newdict)
 
 def AbsoluteLandmarkRelativeMovement(point):
 
